@@ -1,0 +1,25 @@
+{
+  "name": "luck-wheel",
+  "version": "1.0.0",
+  "description": "a simple luck wheel with an authentication system",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "php -S localhost:8000",
+    "build": "tsc && sass --no-source-map --style=compressed ./static/style.scss ./static/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedwr/luck-wheel.git"
+  },
+  "author": "Mohamed Waleed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamedwr/luck-wheel/issues"
+  },
+  "homepage": "https://github.com/mohamedwr/luck-wheel#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.18.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
+}
