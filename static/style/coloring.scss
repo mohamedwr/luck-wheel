@@ -1,0 +1,22 @@
+$items: $pairs * 2;
+
+$next-color: 1;
+@for $i from 1 through $items {
+  $color: 0;
+  $text-color: 0;
+  @if $i % 2 == 1 {
+    $color: $main-color;
+    $text-color: $main-text-color;
+  } @else {
+    $color: nth($colors, $next-color);
+    $text-color: nth($text-colors, $next-color);
+    $next-color: $next-color % length($colors) + 1;
+  }
+  .wheel-container .wheel .wheel-items .wheel-item:nth-child(#{$i}) {
+    border-top-color: $color;
+    transform: rotate(#{math.div(360, $items) * ($i - 1)}deg);
+    .wheel-item-text {
+      color: $text-color;
+    }
+  }
+}
