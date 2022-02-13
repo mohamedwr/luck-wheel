@@ -1,0 +1,8 @@
+node_modules
+
+tsconfig.tsbuildinfo
+
+src/app/database
+
+static/wheel.js
+static/style.css
