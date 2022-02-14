@@ -31,10 +31,12 @@ if ($result === true) {
   reply([
     "new" => true,
     "random" => $record["random"],
+    "stamp" => $record["stamp"],
   ]);
 } else {
   reply([
     "new" => false,
     "item" => $result["item"],
+    "stamp" => $result["stamp"],
   ]);
 }
