@@ -2,10 +2,10 @@
   "name": "luck-wheel",
   "version": "1.0.0",
   "description": "a simple luck wheel with an authentication system",
-  "main": "src/app.ts",
+  "main": "src/wheel.ts",
   "scripts": {
-    "start": "php -S localhost:8000",
-    "build": "tsc && sass --no-source-map --style=compressed ./static/style.scss ./static/style.css"
+    "start": "npm run build && php -S localhost:8000",
+    "build": "tsc && sass --no-source-map --style=compressed ./src/style.scss ./src/style.css"
   },
   "repository": {
     "type": "git",

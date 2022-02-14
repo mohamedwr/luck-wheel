@@ -15,7 +15,7 @@ const regex = /^01([0-2]|5){1}[0-9]{8}$/;
 async function prespin(): Promise<number | null> {
   let phone = prompt("Enter your phone number");
   if (phone?.match(regex)) {
-    const res = await fetch("../src/app.php", {
+    const res = await fetch("../api/auth.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

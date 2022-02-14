@@ -1,8 +1,8 @@
 <?php
 
-require_once "./app/utils.php";
-require_once "./app/datastore.php";
-require_once "./app/wheel.php";
+require_once "./wheel/utils.php";
+require_once "./wheel/datastore.php";
+require_once "./wheel/wheel.php";
 
 header("Access-Control-Allow-Origin: *");
 

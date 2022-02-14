@@ -2,7 +2,7 @@ node_modules
 
 tsconfig.tsbuildinfo
 
-src/app/database
+api/wheel/database
 
-static/wheel.js
-static/style.css
+src/wheel.js
+src/style.css
