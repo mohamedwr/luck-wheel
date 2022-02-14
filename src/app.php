@@ -1,10 +1,15 @@
 <?php
 
-ini_set("display_errors", 1);
-
 require_once "./app/utils.php";
 require_once "./app/datastore.php";
 require_once "./app/wheel.php";
+
+header("Access-Control-Allow-Origin: *");
+
+if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
+  header("Access-Control-Allow-Headers: content-type");
+  die();
+}
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   error("invalid request method", 405);

@@ -7,11 +7,13 @@ function get_data($json, $file = false)
 
 function error($error, $code = 400)
 {
+  header("Content-Type: application/json");
   http_response_code($code);
   die("{\"error\": " . $error . "}");
 }
 
 function reply($res)
 {
+  header("Content-Type: application/json");
   die(json_encode($res));
 }
