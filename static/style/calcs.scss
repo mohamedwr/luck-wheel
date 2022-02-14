@@ -1,6 +1,0 @@
-// radius length of the circle
-$r: calc(math.div($inner-width, 2));
-// half side length of the polygon that the circle is in
-$l: $r * math.tan(math.div(360deg, ($pairs * 4)));
-
-$spin-location: calc(50% - math.div($spin-width, 2));

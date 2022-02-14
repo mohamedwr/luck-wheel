@@ -2,49 +2,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
   .wheel {
     position: relative;
-    width: $width;
-    height: $width;
     border-radius: 50%;
-    border: solid calc(($width - $inner-width) / 2) $spin-color;
+    border: solid var(--border-width) var(--border-color);
+    font-family: var(--font);
     &-items {
       position: relative;
-      width: $inner-width;
-      height: $inner-width;
+      width: var(--width);
+      height: var(--width);
       border-radius: 50%;
       overflow: hidden;
       transition: $duration;
     }
     &-item {
       position: absolute;
-      left: calc($r - $l);
+      left: calc(var(--r) - var(--l));
       width: 0;
       height: 0;
       border: solid;
-      border-width: $r $l 0;
+      border-width: var(--r) var(--l) 0;
       border-color: transparent;
       transform-origin: 50% 100%;
       &-text {
         position: relative;
-        left: (math.div($text-size, 3));
         transform: rotateZ(90deg);
         display: block;
-        margin-top: -(math.div($inner-width, 2.5));
-        margin-left: -(math.div($text-size, 2));
-        font-size: $text-size;
+        margin-top: var(--text-margin-top);
+        margin-left: var(--text-margin-left);
+        width: var(--text-width);
+        font-size: var(--text-size);
+        transform-origin: var(--text-trans-org) 0;
+        text-align: center;
+        font-weight: bold;
       }
     }
-    &-spin {
+    &-arrow {
       position: absolute;
-      top: $spin-location;
-      left: $spin-location;
-      width: $spin-width;
-      height: $spin-width;
+      top: var(--arrow-location);
+      left: var(--arrow-location);
+      width: var(--arrow-width);
+      height: var(--arrow-width);
       display: flex;
       justify-content: center;
       align-items: center;
-      background: $spin-color;
+      background: var(--border-color);
       border-radius: 50%;
       &::after {
         content: "";
@@ -56,31 +62,28 @@
         border: solid;
         border-width: 0 10px 20px;
         border-color: transparent;
-        border-bottom-color: $spin-color;
+        border-bottom-color: var(--border-color);
       }
       &-btn {
-        width: $btn-width;
-        height: $btn-width;
-        background-color: $btn-bg;
+        width: var(--btn-width);
+        height: var(--btn-width);
+        background-color: var(--btn-bg);
         border: none;
         border-radius: 50%;
         font-weight: 600;
-        font-size: 18px;
-        color: $btn-color;
+        font-size: var(--btn-text-size);
+        color: var(--btn-color);
         cursor: pointer;
         user-select: none;
         transition: 0.3s;
         &:hover {
-          color: $btn-hover-color;
+          color: var(--btn-hover-color);
         }
         &:active {
           font-size: 15px;
-          border: solid 3px $btn-active-color;
+          border: solid 3px var(--btn-active-color);
         }
       }
     }
   }
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
