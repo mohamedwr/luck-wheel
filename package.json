@@ -1,0 +1,26 @@
+{
+  "name": "luck-wheel-node-api",
+  "version": "1.0.0",
+  "description": "an alternative luck wheel api built with node.js",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedwr/luck-wheel.git"
+  },
+  "author": "Mohamed Waleed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamedwr/luck-wheel/issues"
+  },
+  "homepage": "https://github.com/mohamedwr/luck-wheel#readme",
+  "dependencies": {
+    "fastify": "^3.27.1",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
