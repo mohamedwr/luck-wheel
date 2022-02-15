@@ -1,0 +1,5 @@
+{
+  "items": ["gift 1", "gift 2", "gift 3", "gift 4", "gift 5", "gift 6"],
+  "forbidden": [0, 2],
+  "regex": "^01([0-2]|5){1}[0-9]{8}$"
+}

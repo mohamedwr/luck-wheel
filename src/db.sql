@@ -1,0 +1,7 @@
+CREATE TABLE items (
+  phone VARCHAR(11)  PRIMARY KEY,
+  random SMALLINT  NOT NULL,
+  index SMALLINT  NOT NULL,
+  item VARCHAR(255)  NOT NULL,
+  stamp INT NOT NULL
+)
