@@ -20,6 +20,10 @@ function invalidRequest(reply, msg) {
 }
 
 app.post("/auth", async (req, reply) => {
+  if (!wheel.isStillAvailable) {
+    reply.code(204);
+    return reply.send();
+  }
   if (typeof req.body !== "object") {
     return invalidRequest(reply, "invalid request body");
   }

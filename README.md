@@ -24,7 +24,7 @@ an alternative API built with Node.js and Postgres for the authentication system
   - `DATA`: JSON data, check `src/data.example.json`
 
 - The endpoints are:
-  - `post /auth`: the same as the PHP API
+  - `post /auth`: the same as the PHP API. It returns 204 response in case of the expiration of the offer.
   - `all *`: returns void response, can be used to check for the API health
 
 **Notes:**
