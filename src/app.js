@@ -7,7 +7,13 @@ const app = fastify({
   logger: false
 });
 
+function initHeaders(reply) {
+  reply.header("Access-Control-Allow-Origin", "*");
+  reply.header("Access-Control-Allow-Headers", "content-type");
+}
+
 function initJson(reply) {
+  initHeaders(reply);
   reply.header("Content-Type", "application/json");
 }
 
@@ -21,6 +27,7 @@ function invalidRequest(reply, msg) {
 
 app.post("/auth", async (req, reply) => {
   if (!wheel.isStillAvailable) {
+    initHeaders();
     reply.code(204);
     return reply.send();
   }
@@ -59,8 +66,7 @@ app.post("/auth", async (req, reply) => {
 });
 
 app.all("*", (req, reply) => {
-  reply.header("Access-Control-Allow-Origin", "*");
-  reply.header("Access-Control-Allow-Headers", "content-type");
+  initHeaders(reply);
   reply.send();
 });
 
